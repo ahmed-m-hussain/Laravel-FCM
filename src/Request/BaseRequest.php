@@ -21,7 +21,7 @@ abstract class BaseRequest
     /**
      * BaseRequest constructor.
      */
-    public function __construct($configKey)
+    public function __construct($configKey = null)
     {
         if($configKey){
             $this->config = app('config')->get('fcm.http.'.$configKey, []);
